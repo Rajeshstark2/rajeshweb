@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 180 100% 50%;
+    --primary-foreground: 240 10% 3.9%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 180 100% 50%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-cyber-dark text-foreground font-sora;
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(0, 255, 247, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(255, 78, 205, 0.1) 0%, transparent 50%);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-lg bg-white/5 border border-white/10 rounded-lg;
+  }
+  
+  .neon-border {
+    @apply border border-cyber-aqua/50 shadow-[0_0_10px_rgba(0,255,247,0.3)];
+  }
+  
+  .cyber-button {
+    @apply relative overflow-hidden bg-gradient-to-r from-cyber-aqua to-neon-pink text-cyber-dark font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(0,255,247,0.5)];
+  }
+  
+  .floating-element {
+    @apply animate-float;
+  }
+  
+  .glow-text {
+    @apply text-transparent bg-clip-text bg-cyber-gradient;
+  }
+
+  .cyber-grid {
+    background-image: 
+      linear-gradient(rgba(0,255,247,0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,255,247,0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom cursor styles */
+body {
+  cursor: none;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #00fff7 0%, #ff4ecd 100%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: all 0.05s ease;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor-large {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #00fff7;
+  background: rgba(0, 255, 247, 0.1);
+  border-radius: 50%;
+  backdrop-filter: blur(5px);
+}
+
+/* Enhanced scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f0f;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #00fff7, #ff4ecd);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #ff4ecd, #00fff7);
+  box-shadow: 0 0 10px rgba(0, 255, 247, 0.5);
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(0, 255, 247, 0.3);
+  color: white;
+}
+
+::-moz-selection {
+  background: rgba(0, 255, 247, 0.3);
+  color: white;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #00fff7;
+  outline-offset: 2px;
+}
+
+/* Matrix mode styles */
+.matrix-mode * {
+  color: #00ff00 !important;
+  background: #000 !important;
+  border-color: #00ff00 !important;
+}
+
+/* Loading animations */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.5) 60%,
+    rgba(255, 255, 255, 0)
+  );
+  background-size: 200px 100%;
+  animation: shimmer 2s infinite;
+}
