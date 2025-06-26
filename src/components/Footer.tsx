@@ -124,7 +124,7 @@ const Footer = () => {
               © {currentYear} Rajesh • All rights reserved
             </div>
             <div className="text-soft-gray text-sm">
-              Crafted with ❤️ and lots of ☕ by{' '}
+              Crafted with love and lots of ☕ by{' '}
               <span className="text-cyber-aqua">Rajesh</span>
             </div>
           </div>
