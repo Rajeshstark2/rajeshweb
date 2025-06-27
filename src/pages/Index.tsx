@@ -99,7 +99,7 @@ const Index = () => {
         <meta property="og:url" content="https://rajesh2005.netlify.app" />
         <meta property="og:title" content="Rajesh - AI Developer & Digital Creator" />
         <meta property="og:description" content="Explore the work of Rajesh – AI Developer, Ethical Hacker, Full-Stack Developer, and Founder of StarkCloudie." />
-        <meta property="og:image" content="https://rajesh2005.netlify.app/preview.jpg" />
+        <meta property="og:image" content="https://rajesh2005.netlify.app/preview.jpg?v=2" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="Rajesh Portfolio" />
@@ -110,7 +110,7 @@ const Index = () => {
         <meta property="twitter:url" content="https://rajesh2005.netlify.app" />
         <meta property="twitter:title" content="Rajesh - AI Developer & Digital Creator" />
         <meta property="twitter:description" content="Explore the work of Rajesh – AI Developer, Ethical Hacker, Full-Stack Developer, and Founder of StarkCloudie." />
-        <meta property="twitter:image" content="https://rajesh2005.netlify.app/preview.jpg" />
+        <meta property="twitter:image" content="https://rajesh2005.netlify.app/preview.jpg?v=2" />
         
         {/* Additional Meta Tags */}
         <meta name="theme-color" content="#000000" />
