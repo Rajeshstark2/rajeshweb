@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
@@ -82,18 +83,54 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Services />
-      <Booking />
-      <Contact />
-      <Footer />
-      <ChatBot />
-    </div>
+    <>
+      <Helmet>
+        {/* Primary Meta Tags */}
+        <title>Rajesh - AI Developer & Digital Creator | StarkCloudie</title>
+        <meta name="title" content="Rajesh - AI Developer & Digital Creator | StarkCloudie" />
+        <meta name="description" content="Explore the work of Rajesh – AI Developer, Ethical Hacker, Full-Stack Developer, and Founder of StarkCloudie." />
+        <meta name="keywords" content="AI Developer, Ethical Hacker, Full-Stack Developer, StarkCloudie, Rajesh, Web Development, Cybersecurity" />
+        <meta name="author" content="Rajesh" />
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="English" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://rajesh2005.netlify.app" />
+        <meta property="og:title" content="Rajesh - AI Developer & Digital Creator" />
+        <meta property="og:description" content="Explore the work of Rajesh – AI Developer, Ethical Hacker, Full-Stack Developer, and Founder of StarkCloudie." />
+        <meta property="og:image" content="https://rajesh2005.netlify.app/preview.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Rajesh Portfolio" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://rajesh2005.netlify.app" />
+        <meta property="twitter:title" content="Rajesh - AI Developer & Digital Creator" />
+        <meta property="twitter:description" content="Explore the work of Rajesh – AI Developer, Ethical Hacker, Full-Stack Developer, and Founder of StarkCloudie." />
+        <meta property="twitter:image" content="https://rajesh2005.netlify.app/preview.jpg" />
+        
+        {/* Additional Meta Tags */}
+        <meta name="theme-color" content="#000000" />
+        <meta name="msapplication-TileColor" content="#000000" />
+        <link rel="canonical" href="https://rajesh2005.netlify.app" />
+      </Helmet>
+      
+      <div className="min-h-screen">
+        <Navigation />
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Services />
+        <Booking />
+        <Contact />
+        <Footer />
+        <ChatBot />
+      </div>
+    </>
   );
 };
 
